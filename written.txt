@@ -1,2 +1,6 @@
-2a.
-2b.
+2a. On MacBook Air (M5), both the batched and unbatched versions converge to about 36-37 FPS.
+There's no difference because it only removes CPU draw-call overhead.
+With particles shrunk 5x, the difference shows: ~830 FPS batched vs ~180 FPS unbatched.
+
+2b. Give each sprite a depth value, output it as gl_Position.z, and enable GL_DEPTH_TEST.
+The rasterizer's depth test on z buffering which compares the depth showing the correct fragment
